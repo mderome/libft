@@ -6,9 +6,9 @@ char    *ft_strchr(const char *s, int c)
     unsigned char *str;
 
     i = 0;
+    str = (unsigned char *)s;
     if (c == 0)
-	    return (s + ft_strlen(s));
-    str = (unsigned char*)s;
+	    return (str + ft_strlen(s));
     while (str[i])
     {
         if (str[i] == (unsigned char)c)
