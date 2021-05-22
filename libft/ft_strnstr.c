@@ -2,9 +2,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
-	size_t j;
-	char *big2;
+	size_t	i;
+	size_t	j;
+	char	*big2;
 
 	i = 0;
 	big2 = (char *)big;

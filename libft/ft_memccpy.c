@@ -2,12 +2,12 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t	i;
-	unsigned char *src2;
-	unsigned char *dest2;
+	size_t			i;
+	unsigned char	*src2;
+	unsigned char	*dest2;
 
 	i = 0;
-	src2 = (unsigned char*)src;
+	src2 = (unsigned char *)src;
 	dest2 = (unsigned char *)dest;
 	while (i < n)
 	{

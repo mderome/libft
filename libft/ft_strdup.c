@@ -6,11 +6,16 @@ char	*ft_strdup(const char *src)
 	char	*dest;
 
 	i = -1;
-	while (src[++i])
+	while (src[i])
 	{
+		i++;
 	}
-	if (!(dest = malloc(sizeof(char) * (i + 1))))
+	dest = malloc(sizeof(char) * (i + 1));
+	if (!dest)
+	{
+		free(dest);
 		return (NULL);
+	}
 	i = -1;
 	while (src[++i])
 	{

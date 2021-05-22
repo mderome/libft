@@ -6,7 +6,7 @@ SRC = 	ft_atoi.c		\
 		ft_isalpha.c	\
 		ft_isascii.c	\
 		ft_isdigit.c	\
-		ft_isnum.c		\
+		ft_isalnum.c		\
 		ft_isprint.c	\
 		ft_itoa.c		\
 		ft_memccpy.c	\
@@ -34,18 +34,29 @@ SRC = 	ft_atoi.c		\
 		ft_substr.c		\
 		ft_tolower.c	\
 		ft_toupper.c	\
+		ft_strmapi.c	\
+
+BONUS = ft_lstsize.c	\
+		ft_lstnew.c		\
+		ft_lstlast.c	\
 
 HEADER = includes
 FLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
 
-**/%.o: **/%.c
-		$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+BNS = $(BONUS:.c=.o)
+
+.o.c :
+		$(CC) $(CFLAGS) -g -c $< -o $(<:.c=.o)
 
 all :		$(NAME)
 
 $(NAME):	$(OBJ)
-			ar -rc $(NAME) $(OBJ) 
+			ar -rc $(NAME) $(OBJ)
+		       	rm -rf $(OBJ)	
+bonus :	$(BNS)
+			ar -rc $(NAME) $(BNS)
+				rm -rf $(BNS)
 
 clean :
 			rm -f $(OBJ)
