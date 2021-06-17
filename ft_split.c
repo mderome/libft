@@ -97,10 +97,7 @@ char	**ft_split2(char const *s, char c, char **tab, unsigned int nbr_strs)
 char	**ft_split(char const *s, char c)
 {
 	char			**tab;
-	char			*str;
-	unsigned int	str_len;
 	unsigned int	nbr_strs;
-	unsigned int	i;
 
 	if (!s)
 		return (NULL);

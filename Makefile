@@ -59,7 +59,7 @@ BONUS = ft_lstsize.c		\
 		ft_lstmap.c		\
 
 HEADER = includes
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
 
 BNS = $(BONUS:.c=.o)

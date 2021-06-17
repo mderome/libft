@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+static char	*ft_strdup2(const char *s)
+{
+	char	*dest;
+	int		i;
+
+	i = 0;
+	dest = malloc(sizeof(char) * 2);
+	dest[i] = s[i];
+	i++;
+	dest[i] = '\0';
+	return (dest);
+}
+
 static int	len_digit(long int nb, int sign)
 {
 	unsigned int	nb_digit;
@@ -51,7 +64,7 @@ char	*ft_itoa(int n)
 
 	sign = 1;
 	if (n == 0)
-		return (ft_strdup("0"));
+		return (ft_strdup2("0"));
 	if (n < 0)
 	{
 		sign *= -1;
